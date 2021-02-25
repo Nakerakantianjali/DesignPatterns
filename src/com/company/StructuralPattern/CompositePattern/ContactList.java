@@ -1,12 +1,13 @@
 package com.company.StructuralPattern.CompositePattern;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContactList {
     public String firstName;
     public String lastName;
     public String phoneNumber;
-    public List<ContactList>contactlist;
+    public List<ContactList>contactlist=new ArrayList<>();
 
     public ContactList() {
     }
@@ -23,8 +24,8 @@ public class ContactList {
         this.phoneNumber = phoneNumber;
         this.contactlist = contactlist;
     }
-    public void AddContact(ContactList contactList){
-        contactlist.add(contactList);
+    public void addContact(ContactList contactList1){
+        contactlist.add(contactList1);
     }
     public  void deleteContact(ContactList contactList){
         contactlist.remove(contactList);
